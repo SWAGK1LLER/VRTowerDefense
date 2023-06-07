@@ -22,7 +22,6 @@ void ATurret::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	
 }
 
 // Called every frame
