@@ -6,6 +6,11 @@
 #include "GameFramework/Actor.h"
 #include "Turret.generated.h"
 
+//Forward Declare
+class UTurretCore;
+class UTurretBase;
+class UTurretCanon;
+
 UCLASS()
 class VRTOWERDEFENSE_API ATurret : public AActor
 {
@@ -14,6 +19,15 @@ class VRTOWERDEFENSE_API ATurret : public AActor
 public:	
 	// Sets default values for this actor's properties
 	ATurret();
+
+	UPROPERTY(BlueprintReadWrite)
+	UTurretBase* Base;
+
+	UPROPERTY(BlueprintReadWrite)
+	UTurretCore* Core;
+
+	UPROPERTY(BlueprintReadWrite)
+	UTurretCanon* Canon;
 
 protected:
 	// Called when the game starts or when spawned
