@@ -10,6 +10,7 @@
 class UTurretCore;
 class UTurretBase;
 class UTurretCanon;
+enum class EAmmoType : uint8;
 
 UCLASS()
 class VRTOWERDEFENSE_API ATurret : public AActor
@@ -20,14 +21,17 @@ public:
 	// Sets default values for this actor's properties
 	ATurret();
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadOnly)
 	UTurretBase* Base;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadOnly)
 	UTurretCore* Core;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadOnly)
 	UTurretCanon* Canon;
+
+	UFUNCTION(BlueprintCallable)
+	void AsignNewCore(TSubclassOf<UTurretCore> NewCoreClass, EAmmoType NewCore);
 
 protected:
 	// Called when the game starts or when spawned
