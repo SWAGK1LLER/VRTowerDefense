@@ -6,7 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "Turret.generated.h"
 
-//Forward Declare
+//Forward Declarations
 class UTurretCore;
 class UTurretBase;
 class UTurretCanon;
