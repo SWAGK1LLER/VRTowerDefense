@@ -15,7 +15,10 @@ class VRTOWERDEFENSE_API UTileComponent : public UStaticMeshComponent
 	GENERATED_BODY()
 
 public:
-	UStaticMesh* _static_mesh;
+
+	UStaticMesh* _staticMesh;
 
 	UTileComponent();
+
+	bool SetStaticMesh(class UStaticMesh* NewMesh) override;
 };

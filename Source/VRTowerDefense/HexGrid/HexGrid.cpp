@@ -43,7 +43,7 @@ void AHexGrid::BeginPlay()
 
 	_radius =  _mesh_of_tile->GetBoundingBox().Max.X * _scale;
 
-	float rowOffset = _radius * -1;;
+	float rowOffset = _radius * -1;
 	bool isA = false;
 
 	//create colomn

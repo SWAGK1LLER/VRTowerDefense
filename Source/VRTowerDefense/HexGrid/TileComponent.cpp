@@ -6,3 +6,10 @@
 UTileComponent::UTileComponent()
 {
 }
+
+bool UTileComponent::SetStaticMesh(UStaticMesh* NewMesh)
+{
+	_staticMesh = NewMesh;
+
+	return UStaticMeshComponent::SetStaticMesh(NewMesh);
+}
